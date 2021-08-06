@@ -2,10 +2,12 @@ package mediator
 
 // 仲裁者
 type Mediator interface {
-	createColleague()
+	CreateColleague()
+	ColleagueChanged()
 }
 
 // 同事
 type Colleague interface {
-
+	SetMediator(m Mediator)
+	SetColleagueEnabled(status bool)
 }
